@@ -77,6 +77,14 @@ class PptXBlock(XBlock):
         self.count += 1
         return {"count": self.count}
 
+    @XBlock.json_handler
+    def submit_video_url(self, data, suffix=''):
+        """
+        A handler, which return the submited video_URL the data.
+        """
+        self.video_url = data['video_url'] 
+        return {"video_url": self.video_url}
+
     
 
     # TO-DO: change this to create the scenarios you'd like to see in the

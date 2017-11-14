@@ -1,6 +1,23 @@
 /* Javascript for PptXBlock. */
 function PptXBlock(runtime, element) {
 
+    // Settings---------------------------
+    function updateVideoUrl(result) {
+        $('.submited_video_url', element).text(result.video_url);
+    }
+
+    var handlerSubmitUrl = runtime.handlerUrl(element, 'submit_video_url');
+
+    $('p', element).click(function(eventObject) {
+        var video_url = $('#video_url').val();
+        $.ajax({
+            type: "POST",
+            url: handlerSubmitUrl,
+            data: JSON.stringify({"video_url": video_url}),
+            success: updateCount
+        });
+    });
+    // Demo---------------------------
     function updateCount(result) {
         $('.count', element).text(result.count);
     }
