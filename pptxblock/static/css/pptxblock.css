@@ -1,0 +1,9 @@
+/* CSS for PptXBlock */
+
+.pptxblock_block .count {
+    font-weight: bold;
+}
+
+.pptxblock_block p {
+    cursor: pointer;
+}

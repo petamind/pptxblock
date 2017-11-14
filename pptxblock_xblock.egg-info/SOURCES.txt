@@ -1,0 +1,12 @@
+pptxblock/__init__.py
+pptxblock/pptxblock.py
+pptxblock/static/README.txt
+pptxblock/static/css/pptxblock.css
+pptxblock/static/html/pptxblock.html
+pptxblock/static/js/src/pptxblock.js
+pptxblock_xblock.egg-info/PKG-INFO
+pptxblock_xblock.egg-info/SOURCES.txt
+pptxblock_xblock.egg-info/dependency_links.txt
+pptxblock_xblock.egg-info/entry_points.txt
+pptxblock_xblock.egg-info/requires.txt
+pptxblock_xblock.egg-info/top_level.txt
