@@ -8,13 +8,13 @@ function PptXBlock(runtime, element) {
 
     var handlerSubmitUrl = runtime.handlerUrl(element, 'submit_video_url');
 
-    $('p', element).click(function(eventObject) {
+    $('.video_url', element).submit(function(eventObject) {
         var video_url = $('#video_url').val();
         $.ajax({
             type: "POST",
             url: handlerSubmitUrl,
             data: JSON.stringify({"video_url": video_url}),
-            success: updateCount
+            success: updateVideoUrl
         });
     });
     // Demo---------------------------
