@@ -16,10 +16,10 @@ class PptXBlock(XBlock):
     # self.<fieldname>.
 
     # TO-DO: delete count, and define your own fields.
-    # count = Integer(
-    #     default=0, scope=Scope.user_state,
-    #     help="A simple counter, to show something happening",
-    # )
+    count = Integer(
+        default=0, scope=Scope.user_state,
+        help="A simple counter, to show something happening",
+    )
 
     video_url = String(
         default="", scope=Scope.settings,
