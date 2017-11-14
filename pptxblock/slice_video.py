@@ -24,7 +24,7 @@ class SliceVideo(threading.Thread):
         # new_days.write(title)
         #print(title)
         # new_days.close()
-        download_cmd = ('youtube-dl {1} -o /vids/{0}/{0}.mp4').format(self.video_id, self.thumbs_html)
+        download_cmd = ('youtube-dl {1} -o /vids/{0}/{0}.mp4').format(self.video_id, self.video_url)
         os.system(download_cmd)
         slice_cmd = ('/vids/tung {0}').format(self.video_id)
         os.system(slice_cmd)
