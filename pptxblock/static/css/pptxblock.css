@@ -7,3 +7,9 @@
 .pptxblock_block p {
     cursor: pointer;
 }
+
+/* CSS for settings */
+.container {
+    width:600px;
+    margin:30px auto;
+}
