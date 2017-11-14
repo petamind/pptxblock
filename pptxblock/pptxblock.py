@@ -4,6 +4,7 @@ import pkg_resources
 from xblock.core import XBlock
 from xblock.fields import Integer, Scope, String
 from xblock.fragment import Fragment
+from slice_video import SliceVideo
 
 
 class PptXBlock(XBlock):
@@ -15,10 +16,10 @@ class PptXBlock(XBlock):
     # self.<fieldname>.
 
     # TO-DO: delete count, and define your own fields.
-    count = Integer(
-        default=0, scope=Scope.user_state,
-        help="A simple counter, to show something happening",
-    )
+    # count = Integer(
+    #     default=0, scope=Scope.user_state,
+    #     help="A simple counter, to show something happening",
+    # )
 
     video_url = String(
         default="", scope=Scope.settings,
@@ -53,6 +54,7 @@ class PptXBlock(XBlock):
         frag.initialize_js('PptXBlock')
         return frag
 
+    #Create simple setting for the xblock
     def studio_view(self, context=None):
         """
         The primary view of the PptXBlock, show settings.
@@ -66,16 +68,16 @@ class PptXBlock(XBlock):
 
     # TO-DO: change this handler to perform your own actions.  You may need more
     # than one handler, or you may not need any handlers at all.
-    @XBlock.json_handler
-    def increment_count(self, data, suffix=''):
-        """
-        An example handler, which increments the data.
-        """
-        # Just to show data coming in...
-        assert data['hello'] == 'world'
+    # @XBlock.json_handler
+    # def increment_count(self, data, suffix=''):
+    #     """
+    #     An example handler, which increments the data.
+    #     """
+    #     # Just to show data coming in...
+    #     assert data['hello'] == 'world'
 
-        self.count += 1
-        return {"count": self.count}
+    #     self.count += 1
+    #     return {"count": self.count}
 
     @XBlock.json_handler
     def submit_video_url(self, data, suffix=''):
@@ -83,9 +85,11 @@ class PptXBlock(XBlock):
         A handler, which return the submited video_URL the data.
         """
         self.video_url = data['video_url'] 
+
+        thread1 = SliceVideo(1, 1, self.video_url, self.thumbs_html)
+        thread1.start()
         return {"video_url": self.video_url}
 
-    
 
     # TO-DO: change this to create the scenarios you'd like to see in the
     # workbench while developing your XBlock.
