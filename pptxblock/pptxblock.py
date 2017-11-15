@@ -88,8 +88,12 @@ class PptXBlock(XBlock):
 
         thread = SliceVideo(1, "1", self.video_url, self.thumbs_html)
         thread.start()
-
-        return {"video_url": self.video_url}
+        while(thread.is_alive){
+            
+        }
+        self.thumbs_html = thread.thumbs_html
+        return {"video_url": thread.thumbs_html}
+    #self.video_url
 
 
     # TO-DO: change this to create the scenarios you'd like to see in the
