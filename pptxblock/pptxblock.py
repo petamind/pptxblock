@@ -1,10 +1,12 @@
 """TO-DO: Write a description of what this XBlock is."""
 
 import pkg_resources
+import time
 from xblock.core import XBlock
 from xblock.fields import Integer, Scope, String
 from xblock.fragment import Fragment
 from slice_video import SliceVideo
+
 
 
 class PptXBlock(XBlock):
@@ -88,9 +90,9 @@ class PptXBlock(XBlock):
 
         thread = SliceVideo(1, "1", self.video_url, self.thumbs_html)
         thread.start()
-        while(thread.is_alive){
-            
-        }
+        while (thread.is_alive()):
+            time.sleep(5)
+        
         self.thumbs_html = thread.thumbs_html
         return {"video_url": thread.thumbs_html}
     #self.video_url
