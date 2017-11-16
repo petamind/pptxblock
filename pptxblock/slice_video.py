@@ -18,7 +18,7 @@ class SliceVideo(threading.Thread):
 
     def run(self):
         # print "Starting " + self.name
-        new_path = 'E:/vids/new_days.txt'
+        new_path = '/vids/new_days.txt'
         new_days = open(new_path, 'w')
 
         title = 'Video Test writing\n'
