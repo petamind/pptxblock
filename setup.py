@@ -23,7 +23,11 @@ def package_data(pkg, roots):
 
 setup(
     name='pptxblock-xblock',
+<<<<<<< HEAD
     version='0.2.8.6',
+=======
+    version='0.2.8.1',
+>>>>>>> parent of 031e0fb... UP
     description='pptxblock XBlock',   # TODO: write a better description.
     license='AGPL v3',          # TODO: choose a license: 'AGPL v3' and 'Apache 2.0' are popular.
     packages=[
