@@ -34,7 +34,10 @@ class SliceVideo(threading.Thread):
         fline = open(('/vids/{0}/{0}.csv').format(self.video_id)).readline().rstrip()
         times = fline.split(",")
         #process to html div 
-        self.thumbs_html += fline
+        self.thumbs_html += "<ul class='images'>"
+        for t in times:
+            self.thumbs_html += "<li><div class='card inline'><img src='' width='100' height='100' /><div class='container'><h4>" + t + "</h4></div></li>"
+
         self.timestamps = times
 
 
