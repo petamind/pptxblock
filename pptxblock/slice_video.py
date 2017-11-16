@@ -38,17 +38,8 @@ class SliceVideo(threading.Thread):
         #     self.thumbs_html += "<li><div class=\'card inline\'><img src=\'\' width=\'100\' height=\'100\' /><div class=\'container\'><h4>"
         #     self.thumbs_html += timestamp
         #     self.thumbs_html += "</h4></div></li>"
-
-<<<<<<< HEAD
-<<<<<<< HEAD
         self.timestamps = timestamps
-=======
-=======
->>>>>>> parent of 031e0fb... UP
-        
-        self.timestamps = times
->>>>>>> parent of 031e0fb... UP
-
+        self.thumbs_html += fline
 
 
 # def print_time(thread_name, counter, delay):
