@@ -31,15 +31,15 @@ class SliceVideo(threading.Thread):
         slice_cmd = ('scenedetect -i /vids/{0}/{0}.mp4 -co /vids/{0}/{0}.csv -d content -si -df 4').format(self.video_id)
         os.system(slice_cmd)
         #read cvs
-        fline = open(('/vids/{0}/{0}.csv').format(self.video_id)).readline().rstrip()
-        timestamps = fline.split(",")
+        # fline = open(('/vids/{0}/{0}.csv').format(self.video_id)).readline().rstrip()
+        # timestamps = fline.split(",")
         #process to html div 
         # for timestamp in timestamps:
         #     self.thumbs_html += "<li><div class=\'card inline\'><img src=\'\' width=\'100\' height=\'100\' /><div class=\'container\'><h4>"
         #     self.thumbs_html += timestamp
         #     self.thumbs_html += "</h4></div></li>"
-        self.timestamps = timestamps
-        self.thumbs_html += fline
+        # self.timestamps = timestamps
+        # self.thumbs_html += fline
 
 
 # def print_time(thread_name, counter, delay):
