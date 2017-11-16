@@ -6,9 +6,6 @@ from xblock.core import XBlock
 from xblock.fields import Integer, Scope, String, List
 from xblock.fragment import Fragment
 from slice_video import SliceVideo
-from django import template
-
-register = template.Library()
 
 class PptXBlock(XBlock):
     """
@@ -103,9 +100,9 @@ class PptXBlock(XBlock):
         return {"video_url": thread.thumbs_html}
     #self.video_url
 
-    @register.filter(name='timestamps')
-    def get_timestamps(self):
-        return self.timestamps
+    # @register.filter(name='timestamps')
+    # def get_timestamps(self):
+    #     return self.timestamps
 
 
     # TO-DO: change this to create the scenarios you'd like to see in the
