@@ -26,9 +26,15 @@ class SliceVideo(threading.Thread):
         # new_days.close()
         download_cmd = ('youtube-dl {1} -o /vids/{0}/{0}.mp4').format(self.video_id, self.video_url)
         os.system(download_cmd)
-        self.thumbs_html += ":finished downloading"
+        
         slice_cmd = ('scenedetect -i /vids/{0}/{0}.mp4 -co /vids/{0}/{0}.csv -d content -si -df 4').format(self.video_id)
         os.system(slice_cmd)
+        #read cvs
+        fline = open(('/vids/{0}/{0}').format(self.video_id)).readline().rstrip()
+        times = fline.split(",")
+        #process to html div 
+        self.thumbs_html += fline
+
 
 
 # def print_time(thread_name, counter, delay):

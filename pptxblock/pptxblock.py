@@ -3,7 +3,7 @@
 import pkg_resources
 import time
 from xblock.core import XBlock
-from xblock.fields import Integer, Scope, String
+from xblock.fields import Integer, Scope, String, List
 from xblock.fragment import Fragment
 from slice_video import SliceVideo
 
@@ -36,6 +36,11 @@ class PptXBlock(XBlock):
     thumbs_html = String(
         default="", scope=Scope.settings,
         help="HTML code to display the result",
+    )
+
+    thumbs_times = List(
+        default=[], scope=Scope.settings,
+        help="List of timestamps of related slices",
     )
 
     def resource_string(self, path):
