@@ -40,8 +40,11 @@ class SliceVideo(threading.Thread):
         #     self.thumbs_html += "</h4></div></li>"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         self.timestamps = timestamps
 =======
+=======
+>>>>>>> parent of 031e0fb... UP
         
         self.timestamps = times
 >>>>>>> parent of 031e0fb... UP

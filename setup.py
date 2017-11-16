@@ -24,7 +24,11 @@ def package_data(pkg, roots):
 setup(
     name='pptxblock-xblock',
 <<<<<<< HEAD
+<<<<<<< HEAD
     version='0.2.8.6',
+=======
+    version='0.2.8.1',
+>>>>>>> parent of 031e0fb... UP
 =======
     version='0.2.8.1',
 >>>>>>> parent of 031e0fb... UP
