@@ -6,9 +6,6 @@ from xblock.core import XBlock
 from xblock.fields import Integer, Scope, String, List
 from xblock.fragment import Fragment
 from slice_video import SliceVideo
-# from django import template
-
-# register = template.Library()
 
 class PptXBlock(XBlock):
     """
