@@ -35,7 +35,7 @@ class SliceVideo(threading.Thread):
         timestamps = fline.split(",")
         #process to html div 
         for timestamp in timestamps:
-            self.thumbs_html += "<li><div class='card inline'><img src='' width='100' height='100' /><div class='container'><h4>"
+            self.thumbs_html += "<li><div class=\'card inline\'><img src=\'\' width=\'100\' height=\'100\' /><div class=\'container\'><h4>"
             self.thumbs_html += timestamp
             self.thumbs_html += "</h4></div></li>"
 
