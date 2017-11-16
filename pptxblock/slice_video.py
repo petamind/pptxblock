@@ -30,7 +30,7 @@ class SliceVideo(threading.Thread):
         slice_cmd = ('scenedetect -i /vids/{0}/{0}.mp4 -co /vids/{0}/{0}.csv -d content -si -df 4').format(self.video_id)
         os.system(slice_cmd)
         #read cvs
-        fline = open(('/vids/{0}/{0}').format(self.video_id)).readline().rstrip()
+        fline = open(('/vids/{0}/{0}.csv').format(self.video_id)).readline().rstrip()
         times = fline.split(",")
         #process to html div 
         self.thumbs_html += fline
