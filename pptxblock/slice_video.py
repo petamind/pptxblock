@@ -37,7 +37,6 @@ class SliceVideo(threading.Thread):
         for t in times:
             self.thumbs_html += "<li><div class='card inline'><img src='' width='100' height='100' /><div class='container'><h4>" + t + "</h4></div></li>"
 
-        
         self.timestamps = times
 
 
