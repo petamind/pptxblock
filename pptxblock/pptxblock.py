@@ -93,7 +93,7 @@ class PptXBlock(XBlock):
         """
         self.video_url = data['video_url'] 
 
-        thread = SliceVideo(1, "1", self.video_url, self.thumbs_html)
+        thread = SliceVideo(1, "1", self.video_url, self.thumbs_html, self.timestamps)
         thread.start()
         while (thread.is_alive()):
             time.sleep(5)

@@ -1,10 +1,21 @@
 <div class="pptxblock_block">
-    <p>Video URL: 
-            <span class='submited_video_url'>{self.video_url}</span>
+    <p>Video URL:
+        <span class='submited_video_url'>{self.video_url}</span>
     </p>
-    
+
     <!-- <p>PptXBlock: count is now
         <span class='count'>{self.count}</span> (click me to increment).
     </p> -->
-    <div class="slices">{self.thumbs_html}</div>
+    <div class="slices">{self.thumbs_html}
+    </div>
+    <div>
+        <ul>
+        {% for i in self.timestamps %}
+            <li>
+                {{ i }} 
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+
 </div>

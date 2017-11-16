@@ -8,12 +8,13 @@ class SliceVideo(threading.Thread):
     Slice the video to images
     """
 
-    def __init__(self, threadID, video_id, video_url, thumbs_html):
+    def __init__(self, threadID, video_id, video_url, thumbs_html, timestamps):
         threading.Thread.__init__(self)
         self.threadID = threadID
         self.video_id = video_id
         self.video_url = video_url
         self.thumbs_html = thumbs_html
+        self.timestamps = timestamps
 
     def run(self):
         # print "Starting " + self.name
@@ -34,6 +35,7 @@ class SliceVideo(threading.Thread):
         times = fline.split(",")
         #process to html div 
         self.thumbs_html += fline
+        self.timestamps = times
 
 
 
