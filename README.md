@@ -10,3 +10,5 @@ sudo -u edxapp /edx/bin/pip.edxapp install pptxblock/
 sudo /edx/bin/supervisorctl restart edxapp:
 
 Blah deprecated3
+
+by github
